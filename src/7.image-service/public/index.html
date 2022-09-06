@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 引入element-ui样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 懒得搭脚手架了，引入vue、element组件库 -->
+  <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- 手动上传 -->
+    <el-upload
+      style="width:50vw;"
+      class="upload-demo"
+      ref="upload"
+      multiple
+      :name="name"
+      :action="url"
+      :before-upload="handleBeforeUpload"
+      :on-preview="handlePreview"
+      :on-remove="handleRemove"
+      :on-success="handleSuccess"
+      :file-list="fileList"
+      :auto-upload="false">
+      <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+      <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
+      <div slot="tip" class="el-upload__tip">请选择需要上传的文件或者图片</div>
+    </el-upload>
+    <div v-for="(item, i) in successUrl" :key="item.url"> 
+      {{ i + 1}}、{{ item.originalName }}: 
+      <span style="color:#0f0;cursor:pointer;margin-left:12px;" @click="window.open(item.url)">{{ item.url }}</span>
+    </div>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        this.url = 'http://localhost:6767/upload/single'
+        return {
+          fileList: [],
+          name: 'file',// 默认file, 即formdata.append('file',imgfile);
+          successUrl: []
+        }
+      },
+      methods: {
+        submitUpload() {
+          this.$refs.upload.submit();
+        },
+        handleRemove(file, fileList) {
+          console.log(file, fileList);
+        },
+        handlePreview(file) {
+          console.log(file);
+        },
+        handleBeforeUpload(file) {
+          console.log(file);
+        },
+        handleSuccess(response, file, fileList) {
+          console.log(response, file, fileList)
+          this.successUrl.push(response)
+        }
+      }
+    })
+  </script>
+
+</body>
+</html>
