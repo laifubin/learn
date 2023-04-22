@@ -12,6 +12,8 @@
 
 #### 6.[gitlab webhook触发](/src/6.gitlab%20webhook%E8%A7%A6%E5%8F%91/readme.md)
 
-### 7.[image-service图片服务器](/src/7.image-service/service.js)
+#### 7.[image-service图片服务器](/src/7.image-service/service.js)
 
-### 8.[shadowsocks翻墙搭建](/src/8.shadowsocks2%E6%90%AD%E5%BB%BA/readme.md)
+#### 8.[shadowsocks翻墙搭建](/src/8.shadowsocks2%E6%90%AD%E5%BB%BA/readme.md)
+
+#### 9.[9.很牛bi的技巧.bashrc](/src/9.%E5%BE%88%E7%89%9Bbi%E7%9A%84%E6%8A%80%E5%B7%A7.bashrc/readme.md)
