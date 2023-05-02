@@ -6,7 +6,7 @@
 
 ##### ------------------------------- 电脑本地 ----------------------------------- 
 
-1. 下载二进制文件(https://github.com/shadowsocks/go-shadowsocks2/releases)，解压并重命名为 `shadowsocks2`,(scp shadowsocks2 root@x.x.x.x:/opt/bin/)将文件上传到服务器
+1. 下载二进制文件(`https://github.com/shadowsocks/go-shadowsocks2/releases`)，解压并重命名为 `shadowsocks2`,(scp shadowsocks2 root@x.x.x.x:/opt/bin/)将文件上传到服务器
 
 ##### ------------------------------- 服务器 -----------------------------------
 

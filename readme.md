@@ -17,3 +17,5 @@
 #### 8.[shadowsocks翻墙搭建](/src/8.shadowsocks2%E6%90%AD%E5%BB%BA/readme.md)
 
 #### 9.[很牛bi的技巧.bashrc](/src/9.%E5%BE%88%E7%89%9Bbi%E7%9A%84%E6%8A%80%E5%B7%A7.bashrc/readme.md)
+
+#### 10.[限制ip访问网站](/src/10.%E9%99%90%E5%88%B6ip%E8%AE%BF%E9%97%AE%E7%BD%91%E7%AB%99/readme.md)
